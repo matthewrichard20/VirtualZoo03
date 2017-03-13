@@ -11,10 +11,16 @@
 
 #include "habitat.h"
 
+/** @class Air
+  * Kelas Air untuk membuat habitat udara (air habitat)
+  */
+
 class Air : public Habitat
 {
+public:
 	/**@brief Constructor
-	 * Mengalokasi parameter-parameter Air*/
+	 * Mengalokasi parameter-parameter Air
+	 * @param make_cage Status bahwa dalam habitat Air adalah cage atau bukan*/
     Air(bool make_cage);
    
 	/**@brief PurifyAir

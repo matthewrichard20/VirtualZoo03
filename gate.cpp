@@ -1,13 +1,15 @@
 //
-//  cell.cpp
+//  gate.cpp
 //  Final1
 //
 //  Created by Richard Matthew on 3/14/17.
 //  Copyright © 2017 MatthewRichard20. All rights reserved.
 //
 
-#include "cell.h"
+#include "gate.h"
 
-char Cell::GetCode(){
-  return cell_code;
+Gate::Gate(char gate)
+{
+  facility_type = 'g';
+  gate_type = gate;
 }

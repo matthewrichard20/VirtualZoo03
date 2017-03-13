@@ -9,18 +9,34 @@
 #ifndef cage_h
 #define cage_h
 #include "animal.h"
-class Cage{
-  public:
+class Cage
+
+/** @class Cage
+  * Kelas Cage untuk membuat kandang
+  */    
+    
+{
+public:
+    /** @brief Constructor.
+      * Mengkonstruksi kandang*/
     Cage();
     
+    /** @brief IsCageEmpty
+      * Mengembalikan nilai true jika kandang masih belum terisi hewan*/
     bool IsCageEmpty();
     
+    /** @brief getAnimal
+      * Melihat hewan apa yang ada di cage tertentu*/ 
     Animal& getAnimal();
     
+    /** @brief setAnimal
+      * Meletakkan hewan di cage tertentu*/
     void setAnimal(Animal &x);
+  
+    void ClearAnimal();
+  
     
-    
-  private:
+private:
     Animal *nAnimal = NULL;
     Animal *penghuni;
     

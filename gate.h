@@ -1,8 +1,17 @@
+
+#include "facility.h"
+/** @class Gate
+  * Kelas Gate untuk membuat gerbang masuk dan keluar
+  */
 class Gate: public Facility{
 	public:
-		Gate();
+		/**@brief Constructor.
+		  *Mengkonstruksi kelas Gate */
+		Gate(char gate);
+		/**@brief Destructor.
+		  *Mengdealokasi parameter dari kelas Gate*/
 		~Gate();
 		
 	protected:
-		char GateType;
-}
+		char gate_type;
+};

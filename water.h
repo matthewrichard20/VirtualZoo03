@@ -13,7 +13,8 @@
 
 class Water : public Habitat
 {
-    Water(bool make_cage);
+public:
+  Water(bool make_cage);
     
     void cleanWater();
     

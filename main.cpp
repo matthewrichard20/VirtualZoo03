@@ -11,7 +11,7 @@ using namespace std;
 void delay(int milliseconds){
   long pause;
   clock_t now,then;
-
+  
   pause = milliseconds*(CLOCKS_PER_SEC/1000);
   now = then = clock();
   while ((now-then) < pause){
@@ -20,16 +20,16 @@ void delay(int milliseconds){
 };
 
 void clearscr(void){
-  #ifdef _WIN32
-      system("cls");
-  #elif defined(unix) || defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
-      system("clear");
+#ifdef _WIN32
+  system("cls");
+#elif defined(unix) || defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
+  system("clear");
   //add some other OSes here if needed
-  #else
-      #error "OS not supported."
-      //you can also throw an exception indicating the function can't be used
-  #endif
-} 
+#else
+#error "OS not supported."
+  //you can also throw an exception indicating the function can't be used
+#endif
+}
 
 void LoadingScreen(){
   int i,j;
@@ -73,53 +73,44 @@ void LoadingScreen(){
 };
 
 int main(){
-
-  int i, j;
-  static const int panjang = 14;
-  static const int lebar = 8;
-  char Peta [panjang][lebar];
   
-  // Peta = new Zoo(panjang,lebar);
+  int i, j;
+  static const int panjang = 25;
+  static const int lebar = 50;
+  char string_peta[panjang][lebar];
+  Zoo actual_zoo(panjang,lebar);
   
   LoadingScreen();
+  // Membuka file eksternal map dan memindahkan ke matriks Zoo
   
-  // INISIALISASI ZOO
-  for (i = 0; i < panjang; i++)
-    for (j = 0; j < lebar; j++)
-      Peta[i][j] = '0';
-      
-  // MENYALIN FILE EKS KE ZOO
   ifstream file ("map.txt");
   string line;
   if(file.is_open()){
     for(i = 0; i < panjang; i++){
-        string row;
-        if (file >> row){
-          for (j = 0; j != min<int>(lebar,row.length()); ++j){
-            Peta[i][j] = row[j];
+      string row;
+      if (file >> row){
+        for (j = 0; j != min<int>(lebar,row.length()); ++j){
+          string_peta[i][j] = row[j];
         }
       } else break;
     }
   }
   file.close();
-  // PENCIPTAAN OBJEK
+
+  // Penciptaan objek pada Zoo
   for (i = 0; i < panjang; i++){
-    for (j = 0; j < lebar){
-      if (Peta[i][j] == 'W'){
-        
-      } else if (Peta[i][j] == 'L') {
-        
-      } else if (Peta[i][j] == 'F') {
-        
-      } else if (Peta[i][j] == 'R') {
-      
-      } else if (Peta[i][j] == '-') {
-        
-      } else if (Peta[i][j] == 'X') {
-        
-      } else if (Peta[i][j] == 'N') {
-      }
+    for (j = 0; j < lebar; j++){
+      actual_zoo.SetCell(string_peta[i][j],i,j);
     }
   }
+  
+  /*
+   for (i = 0; i < panjang; i++){
+   for (j = 0; j < lebar; j++){
+   cout << Peta[i][j];
+   }
+   cout << endl;
+   }
+   */
   return 0;
 }

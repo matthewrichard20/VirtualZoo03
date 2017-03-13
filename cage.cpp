@@ -29,3 +29,8 @@ void Cage::setAnimal(Animal &x)
   penghuni = &x;
   
 }
+
+void Cage::ClearAnimal()
+{
+  penghuni = nAnimal;
+}
