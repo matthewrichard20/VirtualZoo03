@@ -1,5 +1,0 @@
-class waterType : habitatType {
-	
-	
-	
-};
