@@ -9,10 +9,8 @@
 #ifndef cage_h
 #define cage_h
 #include "animal.h"
-class Cage
-
-{
-public:
+class Cage{
+  public:
     Cage();
     
     bool IsCageEmpty();
@@ -22,7 +20,7 @@ public:
     void setAnimal(Animal &x);
     
     
-private:
+  private:
     Animal *nAnimal = NULL;
     Animal *penghuni;
     

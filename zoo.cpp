@@ -5,15 +5,15 @@
 Zoo::Zoo():x(default_size),y(default_size){
   map = new Cell*[default_size];
   for(int i = 0; i < default_size ; i++){
-        map[i] = new Cell[default_size];
-    }
+    map[i] = new Cell[default_size];
+  }
 }
 // @brief Ctor with paramaters
 Zoo::Zoo(int p, int l): x(l),y(p){
   map = new Cell*[p];
   for(int i = 0; i < p ; i++){
-        map[i] = new Cell[l];
-    }
+    map[i] = new Cell[l];
+  }
 }
 // @brief Dtor
 Zoo::~Zoo(){
@@ -45,15 +45,17 @@ void Zoo::MoveAnimal(int x, int y , int to){
         break;
         }
     if (CanMoveAnimal(x,y,tox,toy)){
-      map[tox][toy].setAnimal(map[x][y].getAnimal);
-      moved = true;
-    } else {
-      to = (to % 4) + 1;
-    }
+        map[tox][toy].cage.setAnimal(map[x][y].cage.getAnimal());
+        moved = true;
+      } else {
+        to = (to % 4) + 1;
+      }
   }
 }
 // @brief mengecek apakah bisa memindahkan hewan
 bool Zoo::CanMoveAnimal(int fromx, int fromy, int tox, int toy)
 {
+  if ((map[fromx][fromy].GetCode() == 'h') &&(map[tox][toy].GetCode() == 'h')){
   return (map[fromx][fromy].GetHabitat() == map[tox][toy].GetHabitat() ) && (map[tox][toy].IsCageEmpty);
+  }
 }

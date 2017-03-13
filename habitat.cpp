@@ -11,28 +11,29 @@
 
 Habitat::Habitat (bool make_cage)
 {
-    if (make_cage)
-    {
-        cage = new Cage;
-        
-    }
-    else
-    {
-        cage = nil_cage;
-    }
+  code = 'h';
+  if (make_cage)
+  {
+    cage = new Cage;
     
+  }
+  else
+  {
+    cage = nil_cage;
+  }
+  
 }
 
 Habitat::~Habitat()
 {
-    delete cage;
+  delete cage;
 }
 char Habitat::GetHabitat()
 {
-    return habitat;
+  return habitat;
 }
 
 bool Habitat::IsCageAvailable()
 {
-    return ((cage!=NULL) && (cage->IsCageEmpty()));
+  return ((cage!=NULL) && (cage->IsCageEmpty()));
 }
