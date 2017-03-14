@@ -18,7 +18,6 @@ Cendrawasih::Cendrawasih(int w) : Aves(w){
   sound= "Koak koak";
   tame = true;
   is_animal=true;
-  number_animal++;
 }
   
 Cendrawasih::~Cendrawasih(){

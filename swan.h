@@ -10,7 +10,8 @@
 class Swan : public Aves {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas burung angsa*/
+     * Mengkonstruksi kelas burung angsa
+     * @param w Nilai dari berat badan burung angsa*/
     Swan(int w);
     
     /**@brief Destruktor.

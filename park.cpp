@@ -1,7 +1,8 @@
 #include "park.h"
 
 Park::Park(){
-  facility_type = 'p';
+  facility_type = 'P';
+  code = 'P';
 }
 
 void Park::ViewPark(){

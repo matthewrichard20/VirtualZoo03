@@ -13,7 +13,6 @@ Swan :: Swan(int w) : Aves(w){
   sound = "honk";
   tame = true;
   is_animal = true;
-  number_animal++;
 }
     
 Swan :: ~Swan()
@@ -33,3 +32,4 @@ void Swan :: AnimalDescription()
 {
   cout << "Angsa adalah burung air berukuran dari genus cygnus famili anatidae. " << endl;
   cout << " Angsa umumnya terdapat di daerah beriklim sedang, jarang terdapat di daerah tropis." << endl;
+}

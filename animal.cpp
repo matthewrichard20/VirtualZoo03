@@ -16,8 +16,8 @@ std::string Animal::GetName(){
   return name;
 }  
 
-DietType Animal::GetDiet(){
-  return *diet;
+DietType* Animal::GetDiet(){
+  return diet;
 }
 
 char* Animal::GetHabitat(){
@@ -26,7 +26,7 @@ char* Animal::GetHabitat(){
 
 void Animal::Feed(){
   std::cout<<name;
-  diet->Feeds();
+  diet->Feeds(CalculateFood());
   std::cout<<std::endl;
   std::cout<<name<<" menikmati makanannya dengan lahap"<<std::endl;
 }  

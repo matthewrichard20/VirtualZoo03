@@ -10,7 +10,8 @@
 class Cendrawasih : public Aves {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas cendrawasih*/
+     * Mengkonstruksi kelas cendrawasih
+     * @param w Nilai berat badan dari hewan cendrawasih*/
     Cendrawasih(int w);
     
     /**@brief Destruktor.

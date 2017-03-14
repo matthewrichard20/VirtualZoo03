@@ -11,7 +11,12 @@
 using namespace std;
 Air::Air(bool make_cage) : Habitat(make_cage)
 {
-  habitat = 'a';
+  if (make_cage){
+    code = 'F';
+  }
+  else{
+    code = 'f';
+  }
 }
 
 void Air::PurifyAir()

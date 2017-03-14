@@ -15,7 +15,6 @@ Pigeon :: Pigeon(int w) : Aves(w)
   sound = "Krrrr... Krrrr....";
   tame = true;
   is_animal = true;
-  number_animal++;
 }
     
 Pigeon :: ~Pigeon()

@@ -12,6 +12,7 @@
 Restaurant:: Restaurant()
 {
   facility_type = 'r';
+  code = 'R';
 }
 
 void Restaurant::DisplayFood()

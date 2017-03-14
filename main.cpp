@@ -11,7 +11,7 @@ using namespace std;
 void delay(int milliseconds){
   long pause;
   clock_t now,then;
-  
+
   pause = milliseconds*(CLOCKS_PER_SEC/1000);
   now = then = clock();
   while ((now-then) < pause){
@@ -20,16 +20,16 @@ void delay(int milliseconds){
 };
 
 void clearscr(void){
-#ifdef _WIN32
-  system("cls");
-#elif defined(unix) || defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
-  system("clear");
+  #ifdef _WIN32
+      system("cls");
+  #elif defined(unix) || defined(__unix__) || defined(__unix) || (defined(__APPLE__) && defined(__MACH__))
+      system("clear");
   //add some other OSes here if needed
-#else
-#error "OS not supported."
-  //you can also throw an exception indicating the function can't be used
-#endif
-}
+  #else
+      #error "OS not supported."
+      //you can also throw an exception indicating the function can't be used
+  #endif
+} 
 
 void LoadingScreen(){
   int i,j;
@@ -73,44 +73,42 @@ void LoadingScreen(){
 };
 
 int main(){
-  
+
   int i, j;
   static const int panjang = 25;
   static const int lebar = 50;
-  char string_peta[panjang][lebar];
-  Zoo actual_zoo(panjang,lebar);
+  Zoo peta(panjang,lebar);
   
   LoadingScreen();
   // Membuka file eksternal map dan memindahkan ke matriks Zoo
-  
-  ifstream file ("map.txt");
+  //LoadMap("map.txt");
+  ifstream file ("/Users/RichardMatthew/Documents/Programming/C++/YipYipAppa/Final2.0/Final2.0/map.txt");
   string line;
   if(file.is_open()){
     for(i = 0; i < panjang; i++){
       string row;
       if (file >> row){
         for (j = 0; j != min<int>(lebar,row.length()); ++j){
-          string_peta[i][j] = row[j];
+          peta.SetCell(row[j],i,j);
+          //Peta[i][j] = row[j];
         }
       } else break;
     }
   }
-  file.close();
-
   // Penciptaan objek pada Zoo
+//  for (i = 0; i < panjang; i++){
+//    for (j = 0; j < lebar; j++){
+//      SetCell(peta[i][j],i,j);
+//    }
+//  }
+  
+  
   for (i = 0; i < panjang; i++){
     for (j = 0; j < lebar; j++){
-      actual_zoo.SetCell(string_peta[i][j],i,j);
+      cout << peta.GetCell(i, j)->GetCode();
     }
+    cout << endl;
   }
   
-  /*
-   for (i = 0; i < panjang; i++){
-   for (j = 0; j < lebar; j++){
-   cout << Peta[i][j];
-   }
-   cout << endl;
-   }
-   */
   return 0;
 }

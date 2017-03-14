@@ -10,7 +10,8 @@
 class StingRay : public Pisces {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas pari*/
+     * Mengkonstruksi kelas pari
+     * @param w Nilai dari berat badan ikan pari*/
     StingRay(int w);
     
     /**@brief Destruktor.

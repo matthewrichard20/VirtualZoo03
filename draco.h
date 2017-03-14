@@ -10,7 +10,8 @@
 class Draco : public Reptile {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas bunglon terbang*/
+     * Mengkonstruksi kelas bunglon terbang
+     * @param w Nilai berat badan dari iguana terbang*/
     Draco(int w);
     
     /**@brief Destruktor.

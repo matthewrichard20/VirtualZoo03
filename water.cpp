@@ -12,7 +12,11 @@
 using namespace std;
 Water::Water(bool make_cage) : Habitat(make_cage)
 {
-   habitat = 'w';
+  if (make_cage){
+    code = 'W';
+  } else{
+    code = 'w';
+  }
 }
 
 void Water::cleanWater()

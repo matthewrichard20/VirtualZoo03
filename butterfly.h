@@ -10,7 +10,8 @@
 class Butterfly : public Insect {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas kupu-kupu*/
+     * Mengkonstruksi kelas kupu-kupu
+     * @param w Nilai berat badan dari kupu-kupu*/
     Butterfly(int w);
     
     /**@brief Destruktor.

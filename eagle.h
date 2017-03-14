@@ -10,7 +10,8 @@
 class Eagle : public Aves {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas elang*/
+     * Mengkonstruksi kelas elang
+     * @param w Nilai berat badan dari elang*/
     Eagle(int w);
     
     /**@brief Destruktor.

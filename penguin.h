@@ -4,12 +4,13 @@
 #include "aves.h"
 
 /** @class Penguin.
-  * Kelas Penguin untuk membuat hewan penguin
+  * Kelas Penguin untuk membuat hewan pinguin
   */
 class Penguin : public Aves {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas pinguin*/
+     * Mengkonstruksi kelas pinguin
+     * @param w Nilai dari berat badan pinguin*/
     Penguin(int w);
     
     /**@brief Destruktor.

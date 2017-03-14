@@ -11,5 +11,6 @@
 Gate::Gate(char gate)
 {
   facility_type = 'g';
+  code = gate;
   gate_type = gate;
 }

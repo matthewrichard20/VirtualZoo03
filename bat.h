@@ -10,7 +10,8 @@
 class Bat : public Mammal {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas kelelawar*/
+     * Mengkonstruksi kelas kelelawar
+     * @param w Nilai berat badan dari kelelawar*/
     Bat(int w);
     
     /**@brief Destruktor.

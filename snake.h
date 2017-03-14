@@ -9,7 +9,8 @@
 class Snake : public Reptile {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas ular*/
+     * Mengkonstruksi kelas ular
+     * @param w Nilai dari berat badan ular*/
     Snake(int w);
     
     /**@brief Destruktor.

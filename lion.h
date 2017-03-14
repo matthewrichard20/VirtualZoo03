@@ -9,7 +9,8 @@
 class Lion : public Mammal {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas singa */
+     * Mengkonstruksi kelas singa 
+     * @param w Nilai berat badan dari singa*/
     Lion(int w);
     
     /**@brief Destruktor.

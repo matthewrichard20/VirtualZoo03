@@ -18,7 +18,6 @@ Butterfly::Butterfly(int w) : Insect(w){
   sound= "...";
   tame = true;
   is_animal=true;
-  number_animal++;
 }
   
 Butterfly::~Butterfly(){

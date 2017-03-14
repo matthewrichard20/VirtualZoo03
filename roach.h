@@ -10,7 +10,8 @@
 class Roach : public Insect {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas kecoak*/
+     * Mengkonstruksi kelas kecoak
+     * @param w Nilai dari berat badan kecoak*/
     Roach(int w);
     
     /**@brief Destruktor.

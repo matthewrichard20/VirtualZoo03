@@ -13,7 +13,6 @@ Zebra :: Zebra(int w) : Mammal(w) {
   sound = "*whinny*";
   tame = true;
   is_animal = true;
-  number_animal++;
 }
     
 Zebra :: ~Zebra()

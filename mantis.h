@@ -9,7 +9,8 @@
 class Mantis : public Insect {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas belalang*/
+     * Mengkonstruksi kelas belalang
+     * @param w Nilai untuk berat badan belalang*/
     Mantis(int w);
     
     /**@brief Destruktor.

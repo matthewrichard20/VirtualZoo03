@@ -9,7 +9,8 @@
 class Pigeon : public Aves {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas merpati*/
+     * Mengkonstruksi kelas merpati
+     * @param w Nilai dari berat badan burung merpati*/
     Pigeon(int w);
     
     /**@brief Destruktor.

@@ -9,7 +9,11 @@
 #ifndef carnivore_h
 #define carnivore_h
 
-#include "dietType.h"
+#include "diet_type.h"
+
+/** @class Carnivore
+  * Kelas Carnivore untuk membuat hewan dengan diet tyoe carnivore
+  */
 
 
 class Carnivore : public DietType{
@@ -24,7 +28,8 @@ class Carnivore : public DietType{
     Carnivore(int p);
     
     /**@brief Feed.
-     * Memberi makan hewan berdasarkan jenis makanannya*/
+     * Memberi makan hewan berdasarkan jenis makanannya
+     * @param feed Nilai banyakany makanan yang diberikan kepada hewan*/
     void Feeds (int feed);
 };
 

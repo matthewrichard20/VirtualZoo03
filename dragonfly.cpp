@@ -18,7 +18,6 @@ Dragonfly::Dragonfly(int w) : Insect(w){
   sound= "...";
   tame = true;
   is_animal=true;
-  number_animal++;
 }
   
 Dragonfly::~Dragonfly(){
@@ -29,7 +28,7 @@ Dragonfly::~Dragonfly(){
 void Dragonfly::Interact(){
   std::cout<<"Capung hinggap di rumput"<<std::endl;
   std::cout<<"Begitu didekati capung langsung terbang"<<std::endl;
-  std::cout<<talk()<<std::endl;
+  Talk();
 }
 
 void Dragonfly::AnimalDescription(){

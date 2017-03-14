@@ -13,7 +13,6 @@ Tiger :: Tiger(int w) : Mammal(w){
   sound = "ROAR!!";
   tame = false;
   is_animal = true;
-  number_animal++;
 }
     
 Tiger :: ~Tiger()

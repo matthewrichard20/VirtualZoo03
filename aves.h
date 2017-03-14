@@ -3,10 +3,15 @@
 
 #include "animal.h"
 
+/** @class Aves
+  * Kelas Aves untuk membuat hewan jenis aves
+  */
+
 class Aves : public Animal{
 	public:
         /**@brief Constructor
-         * alokasi untuk aves */
+         * alokasi untuk aves 
+	 * @param w Nilai berat badan dari kelas aves*/
         Aves(int w);
     
 		/**@brief Interaksi.

@@ -18,7 +18,6 @@ Hippo::Hippo(int w) : Mammal(w){
   sound= "Ngok brrr";
   tame = false;
   is_animal=true;
-  number_animal++;
 }
   
 Hippo::~Hippo(){

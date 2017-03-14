@@ -3,10 +3,17 @@
 
 #include "animal.h"
 
+
+
+/** @class Reptile
+  * Kelas Reptile untuk membuat hewan dengan tipe reptil
+  */
+
 class Reptile : public Animal{
 	public:
     /**@brief Constructor
-     * alokasi untuk reptile */
+     * alokasi untuk reptile 
+     * @param w Nilai dari berat badan hewan reptil*/
     Reptile(int w);
     
 		/**@brief Interaksi.

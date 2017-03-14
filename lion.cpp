@@ -18,7 +18,6 @@ Lion::Lion(int w) : Mammal(w){
   sound= "Roar";
   tame = false;
   is_animal=true;
-  number_animal++;
 }
   
 Lion::~Lion(){

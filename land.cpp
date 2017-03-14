@@ -11,18 +11,22 @@
 
 Land::Land(bool make_cage): Habitat(make_cage)
 {
-  habitat = 'l';
+  if (make_cage){
+    code = 'L';
+  }else {
+  code = 'l';
+  }
 }
-void Land::waterTree()
+void Land::WaterTree()
 {
   cout << "Watering the trees" << endl;
 }
-void Land::plantTree()
+void Land::PlantTree()
 {
   cout << "Planting trees" << endl;
 }
 
-void Land::trimGrass()
+void Land::TrimGrass()
 {
   cout << "Trimming the grass" << endl;
 }

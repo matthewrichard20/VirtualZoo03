@@ -15,7 +15,6 @@ Roach :: Roach(int w) : Insect(w)
   sound = "...";
   tame = true;
   is_animal = true;
-  number_animal++;
 }
     
 Roach :: ~Roach()

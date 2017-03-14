@@ -18,7 +18,6 @@ Komodo::Komodo(int w) : Reptile(w){
   sound= "Sshhh";
   tame = false;
   is_animal=true;
-  number_animal++;
 }
   
 Komodo::~Komodo(){

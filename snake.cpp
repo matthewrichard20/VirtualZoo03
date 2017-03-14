@@ -13,7 +13,6 @@ Snake :: Snake(int w) : Reptile(w){
   sound = "ssssshhhhh~";
   tame = true;
   is_animal = true;
-  number_animal++;
 }
     
 Snake :: ~Snake()

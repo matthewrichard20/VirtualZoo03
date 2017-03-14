@@ -11,8 +11,7 @@
 
 Habitat::Habitat (bool make_cage)
 {
-    cell_code = 'h';
-  if (make_cage)
+    if (make_cage)
     {
         cage = new Cage;
         
@@ -24,18 +23,19 @@ Habitat::Habitat (bool make_cage)
     
 }
 
-Habitat::~Habitat()
-{
-    delete cage;
+Habitat::~Habitat(){
+	delete cage;
 }
-char Habitat::GetHabitat()
-{
-    return habitat;
-}
-Cage& Habitat::GetCage(){
-  return *cage;
-}
+
 bool Habitat::IsCageAvailable()
 {
-    return ((cage!=NULL) && (cage->IsCageEmpty()));
+    return ((cage!=nil_cage) && (cage->IsCageEmpty()));
+}
+
+Cage* Habitat::GetCage(){
+	return cage;
+}
+
+char Habitat::GetHabitat(){
+	return code;
 }

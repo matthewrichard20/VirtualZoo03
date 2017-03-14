@@ -31,19 +31,19 @@ public:
     /**@brief GetHabitat.
       *Mengambil tipe dari habitat, land, air atau water*/
     char GetHabitat();
-  
-  /**@brief GetCage.
-   *Mengambil cage*/
-    Cage& GetCage();
-  
+    
     /**@brief IsCageAvailable.
       * Memeriksa apakah habitat tersebut merupakan cage atau bukan*/
     bool IsCageAvailable();
+   
+    
+    /** @brief GetCage
+      * Melihat keadaan cage dalam suatu habitat*/ 
+    Cage* GetCage();
     
 protected :
     Cage *nil_cage = NULL ;
     Cage *cage;
-    char habitat;
 };
 
 

@@ -10,7 +10,8 @@
 class Zebra : public Mammal {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas zebra*/
+     * Mengkonstruksi kelas zebra
+     * @param w Nilai dari berat badan hewan zebra*/
     Zebra(int w);
     
     /**@brief Destruktor.

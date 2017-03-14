@@ -17,23 +17,23 @@
   */
 class Land : public Habitat
 {
-public:
-  /**@brief Constructor.
+  public:
+    /**@brief Constructor. 
       *Mengkonstruksi habitat tipe land
       *@param make_cage */
     Land(bool make_cage);
     
     /**@brief waterTree.
       *Menyirami pohon*/
-    void waterTree();
+    void WaterTree();
     
     /**@brief plantTree. 
       *menanam pohon*/
-    void plantTree();
+    void PlantTree();
     
     /**@brief trimGrass.
       *memotong rumput */
-    void trimGrass();
+    void TrimGrass();
 };
 
 #endif /* land_h */

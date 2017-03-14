@@ -3,16 +3,22 @@
 
 #include <string>
 #include <iostream>
-#include "Renderable.h"
+#include "renderable.h"
 #include "omnivore.h"
 #include "herbivore.h"
 #include "carnivore.h"
 
+/** @class Animal
+  * Kelas Animal untuk membuat hewan
+  */
+
 class Animal : public Renderable{
   public:
     /**@brief Constructor.
-     * Mengalokasikan parameter class Animal*/
-    Animal(int p);
+     * Mengalokasikan parameter class Animal
+     * @param w Nilai berat badan dari suatu Animal
+     */
+    Animal(int w);
     
     /**@brief Destructor.
      * Mendealokasi parameter dari class Animal*/
@@ -28,7 +34,7 @@ class Animal : public Renderable{
              
     /**@brief GetDiet.
      * Mengembalikan jenis pemakan apakah hewan tersebut*/
-    DietType GetDiet();
+    DietType* GetDiet();
     
     /**@brief GetHabitat.
      * Mengembalikan jenis habitat dari hewan*/
@@ -62,8 +68,6 @@ class Animal : public Renderable{
     /**@brief CalculateFood.
      * Menghitung gram makanan untuk hewan*/
     int CalculateFood();
-    
-    static int number_animal;
     
   protected:
     DietType* diet;

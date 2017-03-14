@@ -18,7 +18,6 @@ Giraffe::Giraffe(int w) : Mammal(w){
   sound= "...";
   tame = true;
   is_animal=true;
-  number_animal++;
 }
   
 Giraffe::~Giraffe(){

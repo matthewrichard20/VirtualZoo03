@@ -10,7 +10,8 @@
 class BlueTang : public Pisces {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas ikan blue tang*/
+     * Mengkonstruksi kelas ikan blue tang
+     * @param w Nilai berat badan dari ikan blue tang*/
     BlueTang(int w);
     
     /**@brief Destruktor.

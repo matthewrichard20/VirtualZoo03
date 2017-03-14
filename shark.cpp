@@ -15,7 +15,6 @@ Shark :: Shark(int w) : Pisces(w)
   sound = "...";
   tame = false;
   is_animal = true;
-  number_animal++;
 }
     
 Shark :: ~Shark()

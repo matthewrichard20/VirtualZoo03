@@ -10,4 +10,5 @@
 
 Route::Route(){
   facility_type = 'r';
+  code = '-';
 }

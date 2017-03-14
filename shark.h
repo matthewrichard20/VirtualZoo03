@@ -10,7 +10,8 @@
 class Shark : public Pisces {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas hiu*/
+     * Mengkonstruksi kelas hiu
+     * @param w Nilai dari berat badan hiu*/
     Shark(int w);
     
     /**@brief Destruktor.

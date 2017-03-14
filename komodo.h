@@ -9,7 +9,8 @@
 class Komodo : public Reptile {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas komodo*/
+     * Mengkonstruksi kelas komodo
+     * @param w Nilai berat badan dari hewan komodo*/
     Komodo(int w);
     
     /**@brief Destruktor.

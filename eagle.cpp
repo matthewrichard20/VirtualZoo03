@@ -18,7 +18,6 @@ Eagle::Eagle(int w) : Aves(w){
   sound= "Koak";
   tame = false;
   is_animal=true;
-  number_animal++;
 }
   
 Eagle::~Eagle(){

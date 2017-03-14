@@ -13,7 +13,6 @@ StingRay :: StingRay(int w) : Pisces(w){
   sound = "...";
   tame = true;
   is_animal = true;
-  number_animal++;
 }
     
 StingRay :: ~StingRay()

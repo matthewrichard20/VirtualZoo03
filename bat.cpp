@@ -11,7 +11,6 @@ Bat::Bat(int w) : Mammal(w){
   sound= "Cit ciiit";
   tame = false;
   is_animal=true;
-  number_animal++;
 }
   
 Bat::~Bat(){

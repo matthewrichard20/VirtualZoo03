@@ -18,7 +18,6 @@ clownFish::clownFish(int w) : Pisces(w){
   sound= "Blub blub";
   tame = true;
   is_animal=true;
-  number_animal++;
 }
   
 clownFish::~clownFish(){

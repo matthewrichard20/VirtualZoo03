@@ -10,7 +10,8 @@
 class clownFish : public Pisces {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas ikan badut*/
+     * Mengkonstruksi kelas ikan badut
+     * @param w Nilai berat badan dari ikan badut*/
     clownFish(int w);
     
     /**@brief Destruktor.

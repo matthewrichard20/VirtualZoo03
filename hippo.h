@@ -4,12 +4,13 @@
 #include "mammal.h"
 
 /** @class Hippo
-  * Kelas Hippo untuk membuat hewan kudanil
+  * Kelas Hippo untuk membuat hewan kuda nil
   */
 class Hippo : public Mammal {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas kuda nil*/
+     * Mengkonstruksi kelas kuda nil
+     * @param w Nilai berat badan dari kuda nil*/
     Hippo(int w);
     
     /**@brief Destruktor.

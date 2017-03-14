@@ -18,7 +18,6 @@ Draco::Draco(int w) : Reptile(w){
   sound= "...";
   tame = false;
   is_animal=true;
-  number_animal++;
 }
   
 Draco::~Draco(){

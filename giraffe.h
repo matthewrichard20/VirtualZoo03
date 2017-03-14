@@ -10,7 +10,8 @@
 class Giraffe : public Mammal {
   public:
     /**@brief Konstruktor.
-     * Mengkonstruksi kelas jerapah*/
+     * Mengkonstruksi kelas jerapah
+     * @param w Nilai berat badan dari jerapah*/
     Giraffe(int w);
     
     /**@brief Destruktor.

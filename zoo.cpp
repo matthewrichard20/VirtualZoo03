@@ -1,37 +1,45 @@
 #include <stdio.h>
+#include <fstream>
 #include "zoo.h"
+#include "water.h"
+#include "land.h"
+#include "air.h"
+#include "route.h"
+#include "gate.h"
+#include "restaurant.h"
+#include "park.h"
+using namespace std;
 
 // @brief Ctor with paramaters
-Zoo::Zoo(int p, int l) :panjang(p), lebar(l){
-  map =new Cell**[panjang];
-  for(int i = 0; i < panjang ; i++){
-    map[i] = new Cell*[l];
+Zoo::Zoo(int _p, int _l) : p(_p) , l(_l){
+  map = new Cell**[p];
+  for(int i = 0; i < p ; i++){
+        map[i] = new Cell*[l];
   }
+  animal = new Animal*[40];
 }
 // @brief Dtor
 Zoo::~Zoo(){
-  for(int i = 0; i < panjang; i++){
+  for(int i = 0; i < p; i++){
     delete [] map[i];
   }
   delete [] map;
 }
 // @brief mengubah cell
 void Zoo::SetCell(char c, int i , int j){
-  switch (c) {
-      
-       case ('-') : map[i][j] = new Route(); break;
-       case ('W') : map[i][j] = new Water(true); break;  //ada cage, inisialisasi pointer cage
-       case ('F') : map[i][j] = new Air(true); break;  //ada cage, inisialisasi pointer cage
-       case ('L') : map[i][j] = new Land(true); break;  //ada cage, inisialisasi pointer cage
-       case ('w') : map[i][j] = new Water(false); break;  //habitat aja
-       case ('f') : map[i][j] = new Air(false); break;  //habitat aja
-       case ('l') : map[i][j] = new Land(false); break;  //habitat aja
-       case ('P') : map[i][j] = new Park(); break;
-       case ('R') : map[i][j] = new Restaurant(); break;
-       case ('E') : map[i][j] = new Gate('e'); break;
-       case ('X') : map[i][j] = new Gate('x'); break;
-      
-  }
+	switch (c) {
+	    case ('-') : map[i][j] = new Route; break;
+        case ('W') : map[i][j] = new Water(true); break; // ada cage, inisialisasi pointer cage
+        case ('F') : map[i][j] = new Air(true); break; // ada cage, inisialisasi pointer cage
+        case ('L') : map[i][j] = new Land(true); break; // ada cage, inisialisasi pointer cage
+        case ('w') : map[i][j] = new Water(false); break; // habitat aja
+        case ('f') : map[i][j] = new Air(false); break; // habitat aja
+        case ('l') : map[i][j] = new Land(false); break; // habitat aja
+        case ('P') : map[i][j] = new Park; break;
+        case ('R') : map[i][j] = new Restaurant; break;
+        case ('E') : map[i][j] = new Gate('E'); break;
+        case ('X') : map[i][j] = new Gate('X'); break;
+      }
 }
 // @brief memindahkan hewan
 void Zoo::MoveAnimal(int x, int y){
@@ -55,11 +63,10 @@ void Zoo::MoveAnimal(int x, int y){
       case 4:
         toy--;
         break;
-    }
+        }
     if (CanMoveAnimal(x,y,tox,toy)){
-      map[x][y]->
-      map[tox][toy]->GetCage().setAnimal(map[x][y]->GetCage().getAnimal());
-      map[x][y]->GetCage().ClearAnimal();
+      map[tox][toy]->GetCage()->SetAnimal(map[x][y]->GetCage()->GetAnimal());
+      map[x][y]->GetCage()->SetAnimal(map[x][y]->GetCage()->nAnimal);
       moved = true;
     } else {
       to = (to % 4) + 1;
@@ -69,8 +76,20 @@ void Zoo::MoveAnimal(int x, int y){
 // @brief mengecek apakah bisa memindahkan hewan
 bool Zoo::CanMoveAnimal(int fromx, int fromy, int tox, int toy)
 {
-  if ((map[fromx][fromy]->GetCode() == 'h') && (map[fromx][fromy]->GetCode() == 'h')){
-    return ((map[fromx][fromy]->GetHabitat() == map[tox][toy]->GetHabitat()) && (map[tox][toy]->IsCageAvailable()));
-  }
-  
+  return (fromx == tox && fromy == toy) && (map[tox][toy]->IsCageAvailable());
 }
+
+Cell* Zoo::GetCell(int i, int j)
+{
+  return map[i][j];
+}
+int Zoo::GetPanjang(){
+	return p;
+}
+
+int Zoo::GetLebar(){
+	return l;
+}
+
+
+
