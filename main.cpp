@@ -105,7 +105,7 @@ int main(){
   
   for (i = 0; i < panjang; i++){
     for (j = 0; j < lebar; j++){
-      cout << peta.GetCell(i, j)->GetCode();
+      cout << peta.GetCell(i, j)->Render();
     }
     cout << endl;
   }

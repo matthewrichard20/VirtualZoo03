@@ -66,17 +66,19 @@ void Zoo::MoveAnimal(int x, int y){
         }
     if (CanMoveAnimal(x,y,tox,toy)){
       map[tox][toy]->GetCage()->SetAnimal(map[x][y]->GetCage()->GetAnimal());
-      map[x][y]->GetCage()->SetAnimal(map[x][y]->GetCage()->nAnimal);
+      map[x][y]->GetCage()->ClearAnimal();
       moved = true;
     } else {
       to = (to % 4) + 1;
     }
   }
 }
-// @brief mengecek apakah bisa memindahkan hewan
+/** @brief mengecek apakah bisa memindahkan hewan
+ *  prekondisi, map[fromx][fromy] adalah habitat dengan cage
+ */
 bool Zoo::CanMoveAnimal(int fromx, int fromy, int tox, int toy)
 {
-  return (fromx == tox && fromy == toy) && (map[tox][toy]->IsCageAvailable());
+  return ((map[fromx][fromy]->Render() == map[tox][toy]->Render()) && (map[tox][toy]->IsCageAvailable()));
 }
 
 Cell* Zoo::GetCell(int i, int j)

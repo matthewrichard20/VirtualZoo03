@@ -66,9 +66,7 @@ class Cell : public Renderable{
      * Fungsi virtual dummy agar dapat digunakan oleh kelas child */
     virtual void PutRock();
     
-    virtual char Render();
-		
-    char GetCode();
+    char Render();
 		
 	protected:
 		char code;

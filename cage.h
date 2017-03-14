@@ -25,16 +25,19 @@ public:
       * Mengembalikan nilai true jika kandang masih belum terisi hewan*/
     bool IsCageEmpty();
     
-    /** @brief GetAnimal
+    /** @brief getAnimal
       * Melihat hewan apa yang ada di cage tertentu*/ 
-    Animal* GetAnimal();
+    Animal& GetAnimal();
     
-    /** @brief SetAnimal
+    /** @brief setAnimal
       * Meletakkan hewan di cage tertentu*/
-    void SetAnimal(Animal *x);
+    void SetAnimal(Animal &x);
+  
+    void ClearAnimal();
+  
     
-    Animal *nAnimal = NULL;
 private:
+    Animal *nAnimal = NULL;
     Animal *penghuni;
     
 };

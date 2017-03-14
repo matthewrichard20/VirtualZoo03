@@ -20,7 +20,8 @@ class Land : public Habitat
   public:
     /**@brief Constructor. 
       *Mengkonstruksi habitat tipe land
-      *@param make_cage */
+      *@param make_cage jika true menghasilkan cage
+     */
     Land(bool make_cage);
     
     /**@brief waterTree.

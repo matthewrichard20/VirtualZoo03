@@ -19,13 +19,18 @@ bool Cage::IsCageEmpty()
   return penghuni !=nAnimal;
 }
 
-Animal* Cage::GetAnimal()
+Animal& Cage::GetAnimal()
 {
-  return penghuni;
+  return *penghuni;
 }
 
-void Cage::SetAnimal(Animal *x)
+void Cage::SetAnimal(Animal &x)
 {
-  penghuni = x;
+  penghuni = &x;
   
+}
+
+void Cage::ClearAnimal()
+{
+  penghuni = nAnimal;
 }
